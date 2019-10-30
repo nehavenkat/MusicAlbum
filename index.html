@@ -1,14 +1,23 @@
 <!DOCTYPE html>
-<!--
-ASSIGNMENT RULES
-- The solution must be pushed to the repository and be available for the tutors by the end of the day
-- You can ask for tutor's help
-- You can google / use StackOverflow BUT we suggest you to use just the material provided
-- To test the page, just open it with your default browser.
-- Use Bootstrap4 classes to render the page.
-- Use correctly containers and rows in order to have a great display
-​
-ASSIGNMENT TOPIC 
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<style>
+    img {
+        border: 1px solid;
+        border-radius: 4px;
+        padding: 5px;
+        width: 150px;
+    }
+</style>
+<!-- ASSIGNMENT TOPIC 
 You are creating a website to showcase your favourite albums.
 In this page you'd like to have a short bio of yourself, the top albums of your life, 
 the worst album you ever listen to and everything related to the music you love.
@@ -23,44 +32,143 @@ Could be the Amazon way, the Spotity or Apple music way or some other blog out t
 -->
 ​
 <html>
-    <head>
-        <!-- IMPORT ALL THE BOOSTRAP RELATED CSS & SCRIPTS-->
-​
-        <style>
-         /* PREVIOUS STUFF */
-        </style>
-    </head>
-    <body>
-      <!-- EXERCISE 1
+
+<head>
+    <!-- IMPORT ALL THE BOOSTRAP RELATED CSS & SCRIPTS-->
+
+
+<body>
+    <div class="nav-bar">
+        <div class="container">
+            <nav class="nav align-items-center">
+                <a class="col" href="#">Home</a>
+                <a class="col" href="#">Favourites</a>
+                <a class="col" href="#">Latest</a>
+                <a class="col" href="#">About</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- EXERCISE 1
         Use the specific bootstrap component to implement a Breadcrumb
         -->
-​
-        
-        <!-- EXERCISE 2
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="#">Library</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Data</li>
+        </ol>
+    </nav>
+
+    <!-- EXERCISE 2
             Create a Jumbotron section with a quick explanation / image of the website
         -->
-​
-        <!-- EXERCISE 3
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <h1 class="display-4">My Music Album</h1>
+              <p class="lead">Here I have my favorite collection of light music</p>
+            </div>
+          </div>
+
+        ​
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12" style="background: lightblue ">
+                <h3>Myself</h3>
+                <p>
+                    I love listning to music. I like to listen to light music. I am a trained light music singer.
+                    I have learnt <span>keerthana's</span> a classical south Indian music!! I start my day singing and listning music.
+                </p>
+            </div>
+
+             <!-- EXERCISE 3
             Foreach album in the favorite list, place the genre inside a badge
-        -->
-​
-        <!-- EXERCISE 4
+        -->   <div>
+             <a href="#" class="badge badge-primary"> My Favorite list </a>
+            </div>
+
+
+                  <!-- EXERCISE 4
             Foreach album in the favorite list, use the Bootstrap Card to contain it.
             Use card layouts to format it in the best and more compatible way.
         -->
-​
+        
+            <section>
+        
+         <a href="#" class="badge badge-success">Dear Comrade</a>
+            <div class="card">
+              <img src='Dear Comrade.jpg'>
+             <!--<div class="card-body">
+                <h5 class="card-title">Nee Neeli kanulona</h5>
+                <p class="card-text">Film: Dear Comrade</p>
+                <a href="#" class="btn btn-primary">Listen here</a>
+              </div>-->
+            </div>
+    
+            <table class="table table-hover table-dark">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Handle</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td colspan="2">Larry the Bird</td>
+                        <td>@twitter</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            <a href="#" class="badge badge-success">Oohalu Gusagusalade</a>
+                     <div class="card">
+                        <img src='Oohalu Gusagusalade.jpg'>
+                       <div class="card-body">
+                          <h5 class="card-title">emsandeham ledu</h5>
+                          <p class="card-text">Film: Oohalu Gusagusalade</p>
+                          <a href="#" class="btn btn-primary">Listen here</a>
+                        </div>
+                      </div>
+            <a href="#" class="badge badge-success">Sakhi</a>
+                      <div class="card">
+                            <img src='Sakhi.jpg'>
+                           <div class="card-body">
+                              <h5 class="card-title">Snehithuda Snehithuda</h5>
+                              <p class="card-text">Film: Sakhi</p>
+                              <a href="#" class="btn btn-primary">Listen here</a>
+                            </div>
+                          </div>
+
+
+        </section>
+        ​
         <!-- EXERCISE 5
             Place the tracklist inside a Bootstrap table.
             The row column must be alternate.
             Use one column for the track order, one of the title and one for the length.
             (If you want, you can also add extra columns)
         -->
-​
+        ​
         <!-- EXERCISE 6
             Add a DELETE bootstrap button on each row of the tracklist.
             Clicking on the button the row must disappear
         -->
-​
+        ​
         <!-- EXERCISE 7
             Add a "Contact Me" form in the footer.
             The "Contact Me" form has 2 fields:
@@ -68,15 +176,15 @@ Could be the Amazon way, the Spotity or Apple music way or some other blog out t
             - Text of the message
             Use the correct Bootstrap styles for styling the buttons
         -->
-​
+        ​
         <!-- EXERCISE 8 
             Add to the footer an extra column with the same links of the top nav.
         -->
-​
-         <!-- EXERCISE 9
+        ​
+        <!-- EXERCISE 9
             Add a button "Add Track" under the track list the album
         -->
-​
+        ​
         <!-- EXERCISE 10
             On "Add Track" button, open a new modal.
             The modal shall contain a form with:
@@ -87,7 +195,7 @@ Could be the Amazon way, the Spotity or Apple music way or some other blog out t
             - Live Track (checkbox)
             The fields should be inside an Input Group and divided in 2 columns.
         -->
-​
+        ​
         <!-- EXERCISE 11
             Add 2 bootstrap buttons at the bottom of the modal window:
             - Close => clear the fields and close the modal
@@ -96,26 +204,39 @@ Could be the Amazon way, the Spotity or Apple music way or some other blog out t
             [EXTRA] Make the message disappear after 5 seconds
             https://www.w3schools.com/jsref/met_win_settimeout.asp
         -->
-  
+
         <!-- EXERCISE 12
             All the field (except for Feat. and Live Track) are required fields and requires validation.
             If the user clicks on the Add button and some fields are empty, a warning alert must be show
         -->
-​
+        ​
         <!-- EXERCISE 13
             For each "Album cover" in your page, add a tooltip with the title
         -->
-​
+        ​
         <!-- EXERCISE 14
             Update the header and footer links using scrollspy to render a smooth transition to the parts of the document.
         -->
-​
-         <!-- EXERCISE 15
+        ​
+        <!-- EXERCISE 15
             Add a Album Carousel with controls to display the top 10 albums
         -->
-​
+        ​
         <!-- EXERCISE 16
             Make every section of the page "collapsable" if the user clicks on the section title
         -->
+
+        <script>
+
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+
+        </script>
     </body>
+
 </html>
